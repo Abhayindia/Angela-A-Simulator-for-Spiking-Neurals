@@ -1,0 +1,40 @@
+/dev/ideas/randomkit/CUBA
+/angela2/random/randomkit/randkit.c
+/dev/benchmarks/compare_to_angela1.png
+# Compiled Python files
+*.py[cod]
+
+# Backup files
+*~
+*.bak
+
+# C extensions
+*.so
+
+# generated directories
+dist
+build
+/docs
+docs_sphinx/reference
+
+# Unit test / coverage reports
+.coverage
+
+# Eclipse project files and settings
+.project
+.pydevproject
+/.settings
+
+# pycharm project files
+.idea
+/angela2.egg-info
+
+# VisualStudio Code
+.vscode/
+
+# vim files
+*.swp
+.rope*
+
+# IPython
+.ipynb_checkpoints

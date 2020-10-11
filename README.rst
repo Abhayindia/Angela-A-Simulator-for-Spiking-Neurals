@@ -1,0 +1,89 @@
+angela2
+======
+
+*A clock-driven simulator for spiking neural networks*
+
+angela is a free, open source simulator for spiking neural networks. It is written in the Python programming language and is available on almost all platforms. We believe that a simulator should not only save the time of processors, but also the time of scientists. angela is therefore designed to be easy to learn and use, highly flexible and easily extensible.
+
+Please report issues at the github issue tracker (https://github.com/angela-team/angela2/issues) or in the angela forum (https://angela.discourse.group).
+
+Documentation for angela2 can be found at http://angela2.readthedocs.org
+
+angela2 is released under the terms of the `CeCILL 2.1 license <https://opensource.org/licenses/CECILL-2.1>`_.
+
+If you use angela for your published research, we kindly ask you to cite our article:
+
+Stimberg, M, Brette, R, Goodman, DFM. “angela 2, an Intuitive and Efficient Neural Simulator.” eLife 8 (2019): e47314. `doi: 10.7554/eLife.47314 <https://doi.org/10.7554/eLife.47314>`_.
+
+
+
+.. image:: https://img.shields.io/pypi/v/angela2.svg
+        :target: https://pypi.python.org/pypi/angela2
+
+.. image:: https://img.shields.io/conda/vn/conda-forge/angela2.svg
+        :target: https://anaconda.org/conda-forge/angela2
+
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.654861.svg
+        :target: https://doi.org/10.5281/zenodo.654861
+
+.. image:: https://archive.softwareheritage.org/badge/swh:1:rel:3f86a656a919ae3e6ed6dfc664e121ece3c85d75/
+    :target: https://archive.softwareheritage.org/swh:1:rel:3f86a656a919ae3e6ed6dfc664e121ece3c85d75;origin=https://github.com/angela-team/angela2.git;visit=swh:1:snp:238d008c6403ba6f66c414510cd94b6beb6d51ad/
+
+.. image:: https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg
+        :target: code-of-conduct.md
+        :alt: Contributor Covenant
+
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :alt: Join the chat at https://gitter.im/angela-team/angela2
+   :target: https://gitter.im/angela-team/angela2?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
+Quickstart
+----------
+Try out angela on the `mybinder <https://mybinder.org/>`_ service:
+
+.. image:: http://mybinder.org/badge.svg
+  :target: http://mybinder.org/v2/gh/angela-team/angela2-binder/master?filepath=index.ipynb
+
+Dependencies
+------------
+The following packages need to be installed to use angela 2:
+
+* Python >= 3.5
+* NumPy >=1.10
+* SymPy >= 1.2
+* Cython >= 0.29
+* PyParsing
+* Jinja2 >= 2.7
+* setuptools >= 21
+* py-cpuinfo (only required on Windows)
+
+For full functionality, you might also want to install:
+
+* GSL >=1.16
+* SciPy >=0.13.3
+* Matplotlib >= 2.0
+
+To build the documentation:
+
+* Sphinx (>=1.8)
+
+To run the test suite:
+
+* pytest
+* pytest-xdist (optional)
+
+Testing status for master branch
+--------------------------------
+
+.. image:: https://img.shields.io/travis/angela-team/angela2/master.svg
+  :target: https://travis-ci.org/angela-team/angela2?branch=master
+
+.. image:: https://dev.azure.com/angela-team/angela2/_apis/build/status/angela-team.angela2?branchName=master
+  :target: https://dev.azure.com/angela-team/angela2/_build/latest?definitionId=3&branchName=master
+
+.. image:: https://img.shields.io/coveralls/angela-team/angela2/master.svg
+  :target: https://coveralls.io/r/angela-team/angela2?branch=master
+
+.. image:: https://readthedocs.org/projects/angela2/badge/?version=stable
+  :target: https://angela2.readthedocs.io/en/stable/?badge=stable
+  :alt: Documentation Status

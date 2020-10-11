@@ -1,0 +1,3 @@
+[submodule "docs_sphinx/resources"]
+	path = docs_sphinx/resources
+	url = https://github.com/angela-team/angela2-doc-resources.git
