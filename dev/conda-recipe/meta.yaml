@@ -1,0 +1,83 @@
+package:
+  name: angela2
+  version: "2.4.1+git"
+
+build:
+  number: 0
+  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed . --install-option=--with-cython --install-option=--fail-on-error
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+  host:
+    - python
+    - cython >=0.29
+    - setuptools >=24
+    # we build against the oldest supported numpy version
+    - numpy 1.15
+  run:
+    - python
+    # we don't need the same version as during the build, newer versions are
+    # still ABI-compatible
+    - {{ pin_compatible('numpy') }}
+    - sympy >=1.2
+    - pyparsing
+    - scipy >=0.13.3
+    - gsl >1.15
+    - cython >=0.29
+    - jinja2 >=2.7
+    - setuptools >=24
+    - py-cpuinfo  # [win]
+
+test:
+  imports:
+    - angela2
+    - angela2.codegen
+    - angela2.codegen.generators
+    - angela2.codegen.runtime
+    - angela2.codegen.runtime.cython_rt
+    - angela2.codegen.runtime.numpy_rt
+    - angela2.core
+    - angela2.devices
+    - angela2.devices.cpp_standalone
+    - angela2.equations
+    - angela2.groups
+    - angela2.input
+    - angela2.memory
+    - angela2.monitors
+    - angela2.parsing
+    - angela2.spatialneuron
+    - angela2.sphinxext
+    - angela2.stateupdaters
+    - angela2.synapses
+    - angela2.tests
+    - angela2.tests.features
+    - angela2.units
+    - angela2.utils
+
+  commands:
+    # Run a simple test that uses some of the main simulation elements
+    - 'python -c "from angela2.tests.test_synapses import test_transmission_simple; test_transmission_simple()"'
+
+  requires:
+    - pytest
+
+about:
+  home: http://www.angelasimulator.org/
+  dev_url: https://github.com/angela-team/angela2
+  doc_url: http://angela2.readthedocs.io/
+  license: CeCILL-2.1
+  license_file: LICENSE
+  summary: 'A clock-driven simulator for spiking neural networks'
+  description: |
+    angela2 is a simulator for spiking neural networks available on almost all platforms.
+    The motivation for this project is that a simulator should not only save the time of
+    processors, but also the time of scientists.
+
+    It is the successor of angela1 and shares its approach of being highly flexible
+    and easily extensible. It is based on a code generation framework that allows
+    to execute simulations using other programming languages and/or on different
+    devices.
+
+source:
+  path: ../..
